@@ -68,7 +68,6 @@ public class SharedPreference {
     public static void clearData(Context ctx)
     {
         SharedPreferences.Editor editor = getSharedPreferences(ctx).edit();
-        editor.clear(); //clear all stored data
-        editor.apply();
+        editor.remove(mapKey).apply(); //clear all stored data
     }
 }

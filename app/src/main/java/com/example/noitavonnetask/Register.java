@@ -76,8 +76,8 @@ public class Register extends AppCompatActivity {
                     inputMap.put("Phone No", phoneNo);
                     SharedPreference.saveMap(Register.this, inputMap);
                     SharedPreference.register(Register.this, email, password);
-                    Toast.makeText(Register.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Register.this, MainActivity.class);
+                    Toast.makeText(Register.this, "Registered Successfully, Please log in to continue", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Register.this, Login.class);
                     intent.putExtra("isLoginSuccess", true);
                     startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
                 }

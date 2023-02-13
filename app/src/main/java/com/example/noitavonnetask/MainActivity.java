@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     Button addItemAddButton;
 
     Button clearAllData;
+    Button signOut;
 
     ListView listView;
     ListAdapter listAdapter;
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         addItemAddButton = findViewById(R.id.addItemAddButton);
 
         clearAllData = findViewById(R.id.clearAllData);
+        signOut = findViewById(R.id.sign_out);
 
         listView = findViewById(R.id.profile_listView);
         itemArrayList = new ArrayList<>();
@@ -178,6 +180,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreference.clearData(MainActivity.this);
                 deleteImage();
+                profilePhoto.setImageResource(R.drawable.ic_baseline_account_circle_24);
+                listAdapter.clear();
+            }
+        });
+
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 welcomeLayout.setVisibility(View.VISIBLE);
                 viewProfileLayout.setVisibility(View.GONE);
             }

@@ -45,6 +45,7 @@
         android:id="@+id/sign_up_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:hint="Enter password"
         />
@@ -53,6 +54,7 @@
         android:id="@+id/sign_up_confirm_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:hint="Confirm password"
         />
